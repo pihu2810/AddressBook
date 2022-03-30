@@ -10,6 +10,8 @@ public class AddressBookContacts
 	  private long Zip;
 	  private long PhoneNumber;
 	  private String Email;
+	
+	
 
 	
 public String getFirstName() {
@@ -60,17 +62,20 @@ public String getFirstName() {
 	public void setEmail(String email) {
 		Email = email;
 	}
-
 	public AddressBookContacts(String firstName, String lastName, String address, String city, String state, long zip,
 			long phoneNumber, String email) {
 		super();
-		FirstName = firstName;
-		LastName = lastName;
-		Address = address;
-		City = city;
-		State = state;
-		Zip = zip;
-		PhoneNumber = phoneNumber;
-		Email = email;
-}
+		this.FirstName = firstName;
+		this.LastName = lastName;
+		this.Address = address;
+		this.City = city;
+		this.State = state;
+		this.Zip = zip;
+		this.PhoneNumber = phoneNumber;
+		this.Email = email;
+	}
+	public AddressBookContacts() {
+		// TODO Auto-generated constructor stub
+	}
+	
 }
