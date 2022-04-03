@@ -77,13 +77,19 @@ public class AddressBook {
 		    }
 	}
 
-	public void addMultipleContacts() {
+	public AddressBook addMultipleContacts() {
 		System.out.println("How many person you want ro add?");
 		int numberOfContacts = scanner.nextInt();
 		for (int i=0;i<numberOfContacts;i++)
 			this.addContact();
+		return this;
 	}
 	
-	
+	 @Override
+	    public String toString() {
+	        return "AddressBook{" +
+	                "addressBook=" + addressBook +
+	                '}';
+	    }
 	}
 
