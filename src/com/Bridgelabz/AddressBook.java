@@ -61,7 +61,7 @@ public class AddressBook implements IAddressBook{
 		int place=haveContact(name);
 		if(place>=0) {
 			contactList.remove(place);
-			System.out.println("Successfully Deleted");	
+			
 		}
 		
 	}
