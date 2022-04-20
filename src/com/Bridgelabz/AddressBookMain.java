@@ -29,6 +29,9 @@ public class AddressBookMain {
 		System.out.println("enter the place to be search");
 		String place=sc.next();
 		addressBookDictionary.searchPersonInCityOrState(place);
+		System.out.println("enter the place to be view");
+		String place1=sc.next();
+		addressBookDictionary.viewPersonByCityOrState(place1);
 		
 	}
 }
