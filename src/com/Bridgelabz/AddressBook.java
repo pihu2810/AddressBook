@@ -1,6 +1,7 @@
 package com.Bridgelabz;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Comparator;
 import java.util.HashSet;
 
 
@@ -92,6 +93,23 @@ public class AddressBook implements IAddressBook {
                 '}';
     }
 	
-	
+    class SortByCity implements Comparator<Contact>{
+        @Override
+        public int compare(Contact person1, Contact person2){
+            return person1.address.city.compareTo(person2.address.city);
+        }
+    }
+    class SortByState implements Comparator<Contact> {
+        @Override
+        public int compare(Contact person1, Contact person2) {
+            return person1.address.state.compareTo(person2.address.state);
+        }
+    }
+    class SortByZip implements Comparator<Contact>{
+        @Override
+        public int compare(Contact person1, Contact person2){
+            return (int)(person1.address.zip-person2.address.zip);
+        }
 	}
+}
 
