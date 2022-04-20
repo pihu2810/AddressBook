@@ -46,4 +46,13 @@ public class AddressBookDictionary
                 });
             }
         }
+        //UC-10 getting count of persons in a state or city across all address books
+        public void getPersonsCountByCityOrState(String place){
+            long count = 0;
+            for (Map.Entry<String, AddressBook> e : dictionaryOfAddressBooks.entrySet()) {
+                count = e.getValue().addressBook.stream().filter(n -> n.address.city.equals(place) || n.address.state.equals(place)).count();
+                }
+            System.out.println(count + " persons stay in "+place);
+            }
+
 }
