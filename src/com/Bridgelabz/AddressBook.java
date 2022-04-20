@@ -1,9 +1,8 @@
 package com.Bridgelabz;
 import java.util.Iterator;
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
+
 
 public class AddressBook implements IAddressBook {
 	public static Scanner scanner = new Scanner(System.in);
@@ -53,7 +52,7 @@ public class AddressBook implements IAddressBook {
                 person.email = scanner.next();
                 break;
         }
-//		 System.out.println(person);
+
     }
 
     public void editContact(String name) {
