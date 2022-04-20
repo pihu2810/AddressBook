@@ -28,7 +28,12 @@ public class AddressBookMain {
 		System.out.println("enter the place to be search");
 		String place=sc.next();
 		addressBookDictionary.searchPersonInCityOrState(place);
-		addressBookDictionary.viewPersonByCityOrState(place);
+		System.out.println("enter the place to be view");
+		String place1=sc.next();
+		addressBookDictionary.viewPersonByCityOrState(place1);
+		System.out.println("enter the place to get the person count");
+		String place3=sc.next();
+		addressBookDictionary.getPersonsCountByCityOrState(place3);
 		
 		
 	}
