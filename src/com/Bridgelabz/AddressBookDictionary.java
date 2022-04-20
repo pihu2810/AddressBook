@@ -1,6 +1,10 @@
 package com.Bridgelabz;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 
 public class AddressBookDictionary 
@@ -54,5 +58,16 @@ public class AddressBookDictionary
                 }
             System.out.println(count + " persons stay in "+place);
             }
+        //UC11- ability to sort individual address-book alphabetically by person names
+        public void sortPersonByNames(){
+            for (Map.Entry<String, AddressBook> e : dictionaryOfAddressBooks.entrySet()) {
+                HashSet<Contact> addressBook = e.getValue().addressBook;
 
+                List<Contact> contacts = addressBook.stream().collect(Collectors.toList());
+                Collections.sort(contacts);
+                System.out.println("\n The Address-Book is sorted by name ");
+                System.out.println(contacts);
+            }
+
+        }
 }
