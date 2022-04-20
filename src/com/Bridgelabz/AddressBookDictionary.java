@@ -36,4 +36,14 @@ public class AddressBookDictionary
 
         }
     }
+      //UC-9 Viewing all persons living in a state or city across all address-books
+        public void viewPersonByCityOrState(String place) {
+            for (Map.Entry<String, AddressBook> e : dictionaryOfAddressBooks.entrySet()) {
+                e.getValue().addressBook.stream().forEach(n -> {
+                    if (n.address.city.equals(place) || n.address.state.equals(place)) {
+                        System.out.println("We found " + n +"\n living in "+place);
+                    }
+                });
+            }
+        }
 }
