@@ -19,7 +19,6 @@ public class AddressBookMain {
 		String deletePerson = sc.next();
 		addressBook.deleteContact(deletePerson);
 		System.out.println("Address Book contains: \n" + addressBook);
-
 		addressBook.addMultipleContacts();
 		System.out.println(addressBook);
 
@@ -29,6 +28,8 @@ public class AddressBookMain {
 		System.out.println("enter the place to be search");
 		String place=sc.next();
 		addressBookDictionary.searchPersonInCityOrState(place);
+		addressBookDictionary.viewPersonByCityOrState(place);
+		
 		
 	}
 }
