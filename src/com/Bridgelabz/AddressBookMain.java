@@ -25,10 +25,11 @@ public class AddressBookMain {
 
 		AddressBookDictionary addressBookDictionary = new AddressBookDictionary();
 		addressBookDictionary.addMultipleAddressBook();
-		for(Map.Entry<String, AddressBook> e: addressBookDictionary.dictionaryOfAddressBooks.entrySet())
-		{
-			System.out.println(e.getKey()+" " +e.getValue());
-		}
+		addressBookDictionary.printAddressBookDictionary();
+		System.out.println("enter the place to be search");
+		String place=sc.next();
+		addressBookDictionary.searchPersonInCityOrState(place);
+		
 	}
 }
 
