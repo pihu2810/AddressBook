@@ -5,7 +5,7 @@ public class Address
 	public String city;
 	public String state;
 	public long zip;
-
+	
 	public Address(String city, String state, long zip) {
 		super();
 		this.city = city;
@@ -15,6 +15,6 @@ public class Address
 
 	@Override
 	public String toString() {
-		return "Address [city=" + city + ", state=" + state + ", zip=" + zip + "]";
+		return " [city=" + city + ", state=" + state + ", zip=" + zip + "]";
 	}
 }
