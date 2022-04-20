@@ -2,7 +2,7 @@ package com.Bridgelabz;
 
 import java.util.Objects;
 
-public class Contact
+public class Contact implements Comparable<Contact>
 {
 	String name;
 	public Address address;
@@ -38,6 +38,10 @@ public class Contact
 	@Override
 	public int hashCode() {
 		return Objects.hash(name);
+	}
+	@Override
+	public int compareTo(Contact o) {
+		return this.name.compareTo(o.name);
 	}
 	
 }
